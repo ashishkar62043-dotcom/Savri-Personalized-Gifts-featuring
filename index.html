@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savri Personalized Gifts | Bespoke Keepsakes & Custom Gift Catalogue</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display, Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        accent: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        plum: {
+                            950: '#24091D',
+                            900: '#3B1330',
+                            800: '#521B43',
+                            700: '#6D2459',
+                        },
+                        terracotta: {
+                            400: '#DF8569',
+                            500: '#C86D51',
+                            600: '#B0573C',
+                        },
+                        champagne: {
+                            300: '#F2DF9B',
+                            400: '#E2C365',
+                            500: '#D4AF37',
+                            600: '#B59122',
+                        },
+                        pearl: {
+                            50: '#FFFBF7',
+                            100: '#FAF3EB',
+                            200: '#F2E5D7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pearl-50 text-slate-800 font-sans antialiased selection:bg-plum-900 selection:text-champagne-300 overflow-x-hidden">
+
+    <!-- Top Client-Preview Pitch Banner -->
+    <div class="bg-plum-950 text-champagne-300 text-xs sm:text-sm py-2.5 px-4 text-center border-b border-champagne-500/25 flex flex-wrap items-center justify-center gap-2">
+        <span class="inline-flex items-center gap-2 font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            Interactive Website Demo Preview for <strong class="text-white">Savri Personalized Gifts</strong> — Built for Instant WhatsApp Orders
+        </span>
+        <span class="hidden md:inline text-champagne-500/40">|</span>
+        <a href="#customizer" class="underline hover:text-white transition font-semibold">Try Live Gift Customizer &rarr;</a>
+    </div>
+
+    <!-- Sticky Glassmorphism Navbar -->
+    <header class="sticky top-0 z-40 bg-pearl-50/90 backdrop-blur-md border-b border-plum-900/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Custom Inline SVG Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-plum-900 to-plum-800 border border-champagne-400/50 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <svg class="w-7 h-7 text-champagne-400" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Ornate Ribbon Gift Box with Sparkle/Heart Motif -->
+                            <rect x="13" y="27" width="38" height="26" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                            <rect x="10" y="20" width="44" height="7" rx="2.5" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M32 20V53" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M32 20C27 12 18 11 18 16.5C18 20 25 20 32 20Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/>
+                            <path d="M32 20C37 12 46 11 46 16.5C46 20 39 20 32 20Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/>
+                            <!-- Sparkle Star -->
+                            <path d="M51 8L52.5 11.5L56 13L52.5 14.5L51 18L49.5 14.5L46 13L49.5 11.5L51 8Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-plum-900 tracking-wide block leading-none">SAVRI</span>
+                        <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-terracotta-500 font-bold block mt-1">Personalized Gifts</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#catalog" class="hover:text-plum-900 transition">Catalog</a>
+                    <a href="#customizer" class="hover:text-plum-900 transition">Customizer</a>
+                    <a href="#occasions" class="hover:text-plum-900 transition">Occasions</a>
+                    <a href="#reviews" class="hover:text-plum-900 transition">Reviews</a>
+                    <a href="#contact" class="hover:text-plum-900 transition">Contact</a>
+                </nav>
+
+                <!-- Right Actions: Wishlist Counter + WhatsApp Order CTA -->
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                    <!-- Saved Wishlist Button -->
+                    <button onclick="openWishlistModal()" aria-label="Saved Wishlist" class="relative p-2.5 sm:px-3.5 sm:py-2.5 rounded-full bg-pearl-100 hover:bg-pearl-200 border border-plum-900/10 text-plum-900 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-heart text-terracotta-500 text-base"></i>
+                        <span class="hidden sm:inline text-xs font-bold">Saved</span>
+                        <span id="wishlist-count" class="w-5 h-5 rounded-full bg-plum-900 text-champagne-300 text-[11px] font-bold flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- WhatsApp Order CTA -->
+                    <a href="#customizer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-plum-900 to-plum-800 hover:from-plum-800 hover:to-plum-700 text-champagne-300 font-bold px-5 py-2.5 rounded-full text-sm shadow-md shadow-plum-900/20 transition transform hover:-translate-y-0.5 border border-champagne-400/30">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                        <span>WhatsApp Order</span>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden text-plum-900 p-2.5 rounded-xl bg-pearl-100 hover:bg-pearl-200 transition">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-pearl-50 border-t border-plum-900/10 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#catalog" class="mobile-link block py-2.5 px-3 rounded-xl text-slate-800 hover:bg-pearl-100 font-semibold">Online Gift Catalogue</a>
+            <a href="#customizer" class="mobile-link block py-2.5 px-3 rounded-xl text-slate-800 hover:bg-pearl-100 font-semibold">Live Gift Customizer</a>
+            <a href="#occasions" class="mobile-link block py-2.5 px-3 rounded-xl text-slate-800 hover:bg-pearl-100 font-semibold">Shop by Occasion</a>
+            <a href="#reviews" class="mobile-link block py-2.5 px-3 rounded-xl text-slate-800 hover:bg-pearl-100 font-semibold">Customer Reviews</a>
+            <a href="#contact" class="mobile-link block py-2.5 px-3 rounded-xl text-slate-800 hover:bg-pearl-100 font-semibold">Contact &amp; Delivery Info</a>
+            <a href="#customizer" class="mobile-link block text-center mt-3 bg-plum-900 text-champagne-300 font-bold py-3 rounded-xl shadow-md">
+                <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> Customize &amp; Order on WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Boutique Luxury Hero Section -->
+    <section class="relative bg-gradient-to-br from-plum-950 via-plum-900 to-plum-800 text-pearl-50 overflow-hidden">
+        <!-- Decorative Ambient Glows -->
+        <div class="absolute -top-28 -left-24 w-96 h-96 bg-terracotta-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-champagne-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Editorial Copy -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-white/10 border border-champagne-400/35 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs sm:text-sm text-champagne-300 font-semibold">
+                        <i class="fa-solid fa-sparkles text-champagne-400"></i>
+                        <span>Handcrafted Keepsakes • Custom Name &amp; Photo Engraving</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                        Gifts Crafted With <span class="italic font-accent text-transparent bg-clip-text bg-gradient-to-r from-champagne-300 via-champagne-400 to-terracotta-400">Your Story</span>, Delivered With Love
+                    </h1>
+
+                    <p class="text-pearl-100/90 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Make every birthday, anniversary, wedding, and corporate milestone unforgettable with bespoke 3D moon lamps, laser-engraved wooden frames, Spotify plaques, and luxury celebration hampers.
+                    </p>
+
+                    <!-- Dual Primary CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-terracotta-500 to-terracotta-600 hover:from-terracotta-400 hover:to-terracotta-500 text-white font-bold text-base shadow-xl shadow-black/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+                            <span>Explore Gift Catalogue</span>
+                            <i class="fa-solid fa-gift"></i>
+                        </a>
+                        <a href="#customizer" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-champagne-300/35 text-white font-semibold text-base backdrop-blur-sm transition flex items-center justify-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                            <span>Customize &amp; Order on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- 4 Trust Badges Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-white/10 text-left">
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3">
+                            <i class="fa-solid fa-pen-nib text-champagne-400 text-base mb-1 block"></i>
+                            <p class="text-xs font-bold text-white">Custom Name &amp; Photo</p>
+                            <p class="text-[11px] text-pearl-200/75">Precision Laser Engraving</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3">
+                            <i class="fa-solid fa-truck-fast text-terracotta-400 text-base mb-1 block"></i>
+                            <p class="text-xs font-bold text-white">Pan-India Shipping</p>
+                            <p class="text-[11px] text-pearl-200/75">Dispatches in 24–48 Hrs</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3">
+                            <i class="fa-solid fa-ribbon text-champagne-400 text-base mb-1 block"></i>
+                            <p class="text-xs font-bold text-white">Luxury Gift Wrap</p>
+                            <p class="text-[11px] text-pearl-200/75">Boutique Packaging Ready</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3">
+                            <i class="fa-solid fa-star text-amber-400 text-base mb-1 block"></i>
+                            <p class="text-xs font-bold text-white">4.9★ Happy Customers</p>
+                            <p class="text-[11px] text-pearl-200/75">3,500+ Gifts Delivered</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Product Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl p-2.5 bg-gradient-to-br from-champagne-400/50 via-terracotta-500/30 to-transparent shadow-2xl">
+                        <div class="relative rounded-2xl overflow-hidden bg-plum-950">
+                            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=900&q=85" 
+                                 onerror="this.src='https://placehold.co/800x920/3B1330/E2C365?text=Savri+Personalized+Luxury+Gifts'" 
+                                 alt="Luxury Personalized Gift Box by Savri" 
+                                 class="w-full h-[380px] sm:h-[460px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-plum-950 via-plum-950/25 to-transparent"></div>
+
+                            <!-- Top Right Bestseller Pill -->
+                            <div class="absolute top-4 right-4 bg-terracotta-500 text-white px-3.5 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1.5">
+                                <i class="fa-solid fa-fire"></i> Most Gifted This Week
+                            </div>
+
+                            <!-- Bottom Spotlight Card -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md border border-champagne-500/40 p-4 rounded-2xl text-slate-800 flex items-center justify-between gap-3 shadow-xl">
+                                <div>
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-terracotta-600">Bestseller Keepsake</span>
+                                    <h3 class="font-serif font-bold text-base text-plum-900">Custom 3D Moon Lamp with Photo</h3>
+                                    <p class="text-xs text-slate-600 mt-0.5">₹899 • Free Digital Preview Before Printing</p>
+                                </div>
+                                <button onclick="selectGiftInCustomizer(1)" class="shrink-0 px-4 py-2.5 rounded-xl bg-plum-900 hover:bg-terracotta-500 text-champagne-300 hover:text-white text-xs font-bold transition shadow-md">
+                                    Customize
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Occasion Strip (Interactive Filter Trigger) -->
+    <section id="occasions" class="py-10 bg-pearl-100 border-b border-plum-900/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Curated For Every Milestone</span>
+                    <h2 class="font-serif text-2xl font-bold text-plum-900">Shop by Occasion</h2>
+                </div>
+                <p class="text-xs text-slate-500">Tap any occasion to filter matching personalized gifts below</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+                <button onclick="filterByOccasion('birthday')" class="occasion-card group bg-white hover:bg-plum-900 p-4 rounded-2xl border border-plum-900/10 shadow-sm transition text-left flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-terracotta-500/15 group-hover:bg-white/15 text-terracotta-600 group-hover:text-champagne-300 flex items-center justify-center text-lg shrink-0 transition">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-plum-900 group-hover:text-white transition">Birthday</h3>
+                        <p class="text-[11px] text-slate-500 group-hover:text-pearl-200 transition">Lamps, Mugs &amp; Frames</p>
+                    </div>
+                </button>
+
+                <button onclick="filterByOccasion('couples')" class="occasion-card group bg-white hover:bg-plum-900 p-4 rounded-2xl border border-plum-900/10 shadow-sm transition text-left flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-terracotta-500/15 group-hover:bg-white/15 text-terracotta-600 group-hover:text-champagne-300 flex items-center justify-center text-lg shrink-0 transition">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-plum-900 group-hover:text-white transition">Anniversary</h3>
+                        <p class="text-[11px] text-slate-500 group-hover:text-pearl-200 transition">Couple Keepsakes</p>
+                    </div>
+                </button>
+
+                <button onclick="filterByOccasion('hampers')" class="occasion-card group bg-white hover:bg-plum-900 p-4 rounded-2xl border border-plum-900/10 shadow-sm transition text-left flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-terracotta-500/15 group-hover:bg-white/15 text-terracotta-600 group-hover:text-champagne-300 flex items-center justify-center text-lg shrink-0 transition">
+                        <i class="fa-solid fa-ring"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-plum-900 group-hover:text-white transition">Wedding Gifts</h3>
+                        <p class="text-[11px] text-slate-500 group-hover:text-pearl-200 transition">Luxury Hampers</p>
+                    </div>
+                </button>
+
+                <button onclick="filterByOccasion('couples')" class="occasion-card group bg-white hover:bg-plum-900 p-4 rounded-2xl border border-plum-900/10 shadow-sm transition text-left flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-terracotta-500/15 group-hover:bg-white/15 text-terracotta-600 group-hover:text-champagne-300 flex items-center justify-center text-lg shrink-0 transition">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-plum-900 group-hover:text-white transition">Valentine &amp; Love</h3>
+                        <p class="text-[11px] text-slate-500 group-hover:text-pearl-200 transition">Neon &amp; Spotify Art</p>
+                    </div>
+                </button>
+
+                <button onclick="filterByOccasion('decor')" class="occasion-card col-span-2 sm:col-span-1 group bg-white hover:bg-plum-900 p-4 rounded-2xl border border-plum-900/10 shadow-sm transition text-left flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-xl bg-terracotta-500/15 group-hover:bg-white/15 text-terracotta-600 group-hover:text-champagne-300 flex items-center justify-center text-lg shrink-0 transition">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-plum-900 group-hover:text-white transition">Corporate Gifting</h3>
+                        <p class="text-[11px] text-slate-500 group-hover:text-pearl-200 transition">Engraved Desk Sets</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Filterable & Searchable Online Gift Catalogue -->
+    <section id="catalog" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-terracotta-600 font-bold text-xs uppercase tracking-[0.22em]">Curated Gift Atelier</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-plum-900 mt-2">Online Personalized Gift Catalogue</h2>
+            <p class="text-slate-600 mt-3 text-sm sm:text-base">Browse our bestselling keepsakes. Save your favorites to your wishlist, preview details, or click <strong class="text-plum-900">"Customize &amp; Order on WhatsApp"</strong> to personalize instantly.</p>
+        </div>
+
+        <!-- Category Filter Pills + Live Search Bar -->
+        <div class="bg-white p-4 rounded-3xl shadow-sm border border-plum-900/10 mb-10 flex flex-col xl:flex-row items-center justify-between gap-4">
+            <div id="catalog-tabs" class="flex flex-wrap items-center justify-center gap-2 w-full xl:w-auto">
+                <button data-filter="all" class="cat-tab active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-plum-900 text-champagne-300 shadow-sm transition">
+                    All Gifts
+                </button>
+                <button data-filter="couples" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-pearl-100 text-slate-700 hover:bg-pearl-200 transition">
+                    For Couples &amp; Anniversary
+                </button>
+                <button data-filter="birthday" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-pearl-100 text-slate-700 hover:bg-pearl-200 transition">
+                    Birthday Specials
+                </button>
+                <button data-filter="decor" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-pearl-100 text-slate-700 hover:bg-pearl-200 transition">
+                    Home &amp; Desk Decor
+                </button>
+                <button data-filter="hampers" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-pearl-100 text-slate-700 hover:bg-pearl-200 transition">
+                    Hampers &amp; Combos
+                </button>
+            </div>
+
+            <!-- Search Input -->
+            <div class="relative w-full xl:w-72">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input type="text" id="gift-search" placeholder="Search moon lamp, frame, wallet..." 
+                       class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm focus:outline-none focus:ring-2 focus:ring-plum-900 focus:bg-white transition">
+            </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div id="gift-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Empty Search Fallback -->
+        <div id="empty-state" class="hidden text-center py-14 bg-white rounded-3xl border border-plum-900/10">
+            <i class="fa-solid fa-gift text-4xl text-terracotta-400 mb-3"></i>
+            <p class="font-serif text-xl font-bold text-plum-900">No matching personalized gifts found</p>
+            <p class="text-xs text-slate-500 mt-1">Try searching for "Moon Lamp", "Spotify", "Wallet", or view all gifts.</p>
+            <button onclick="resetCatalog()" class="mt-4 px-5 py-2.5 rounded-xl bg-plum-900 text-champagne-300 text-xs font-bold">Show All Gifts</button>
+        </div>
+    </section>
+
+    <!-- Interactive Live Gift Customizer & Instant WhatsApp Order Builder -->
+    <section id="customizer" class="py-16 sm:py-24 bg-gradient-to-br from-plum-950 via-plum-900 to-plum-800 text-pearl-50 relative overflow-hidden">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-terracotta-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block bg-champagne-500/15 text-champagne-300 border border-champagne-400/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Live Personalization Studio
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3">
+                    Customize Your Gift &amp; Send WhatsApp Order
+                </h2>
+                <p class="text-pearl-100/85 text-sm sm:text-base mt-2">
+                    Pick your gift, enter the name or message you want engraved, see a live preview of your custom gift tag, and send your complete order enquiry on WhatsApp in one tap.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Configuration Form (7 Cols) -->
+                <div class="lg:col-span-7 bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-champagne-400/30 space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Select Gift -->
+                        <div class="sm:col-span-2">
+                            <label for="cust-gift" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">1. Select Gift from Catalogue</label>
+                            <select id="cust-gift" onchange="updateCustomizer()" class="w-full p-3.5 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm font-bold text-plum-900 focus:outline-none focus:ring-2 focus:ring-plum-900">
+                                <!-- Options populated via JS -->
+                            </select>
+                        </div>
+
+                        <!-- Size / Variant -->
+                        <div>
+                            <label for="cust-variant" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">2. Size / Edition</label>
+                            <select id="cust-variant" onchange="updateCustomizer()" class="w-full p-3.5 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-900">
+                                <option value="0" data-label="Standard Classic Size">Standard Classic (Included)</option>
+                                <option value="250" data-label="Large Deluxe Edition (+₹250)">Large Deluxe Edition (+₹250)</option>
+                            </select>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div>
+                            <label for="cust-qty" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">3. Quantity</label>
+                            <div class="flex items-center border border-plum-900/15 rounded-xl bg-pearl-50 overflow-hidden">
+                                <button type="button" onclick="adjustCustQty(-1)" class="px-4 py-3 text-plum-900 hover:bg-pearl-200 font-bold transition">-</button>
+                                <input type="number" id="cust-qty" value="1" min="1" max="100" onchange="updateCustomizer()" class="w-full text-center bg-transparent font-extrabold text-plum-900 text-sm focus:outline-none">
+                                <button type="button" onclick="adjustCustQty(1)" class="px-4 py-3 text-plum-900 hover:bg-pearl-200 font-bold transition">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Custom Name / Engraving Text -->
+                        <div class="sm:col-span-2">
+                            <label for="cust-text" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">4. Custom Name / Engraving Message</label>
+                            <input type="text" id="cust-text" maxlength="45" placeholder="e.g., Happy Birthday Riya • 14.11.2026" oninput="updateCustomizer()" 
+                                   class="w-full p-3.5 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm font-semibold text-plum-900 focus:outline-none focus:ring-2 focus:ring-plum-900">
+                        </div>
+
+                        <!-- Photo Upload Status -->
+                        <div class="sm:col-span-2">
+                            <label for="cust-photo" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">5. Photo Customization Preference</label>
+                            <select id="cust-photo" onchange="updateCustomizer()" class="w-full p-3.5 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-900">
+                                <option value="Will share high-res photo on WhatsApp">Will share high-res photo directly on WhatsApp</option>
+                                <option value="Name / Text Engraving Only (No Photo)">Name / Text Engraving Only (No Photo Needed)</option>
+                                <option value="Need Designer Help Choosing Layout">Need Designer Help Choosing Photo Layout</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Optional Packaging Add-Ons -->
+                    <div>
+                        <span class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-2">6. Optional Luxury Upgrades</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="cursor-pointer flex items-center gap-3 p-3.5 rounded-2xl bg-pearl-50 border border-plum-900/15 hover:border-terracotta-500 transition">
+                                <input type="checkbox" id="opt-wrap" value="99" checked onchange="updateCustomizer()" class="accent-plum-900 w-4 h-4">
+                                <div class="text-xs">
+                                    <span class="font-bold text-plum-900 block">Luxury Velvet Gift Wrap</span>
+                                    <span class="text-terracotta-600 font-semibold">+₹99 (Satin Ribbon &amp; Box)</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer flex items-center gap-3 p-3.5 rounded-2xl bg-pearl-50 border border-plum-900/15 hover:border-terracotta-500 transition">
+                                <input type="checkbox" id="opt-card" value="49" onchange="updateCustomizer()" class="accent-plum-900 w-4 h-4">
+                                <div class="text-xs">
+                                    <span class="font-bold text-plum-900 block">Personalized Greeting Card</span>
+                                    <span class="text-terracotta-600 font-semibold">+₹49 (Printed Inside Message)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Customer Name & Delivery City / Pincode -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                        <div>
+                            <label for="cust-buyer" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">7. Your Name</label>
+                            <input type="text" id="cust-buyer" placeholder="Enter your name" class="w-full p-3 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm focus:outline-none focus:ring-2 focus:ring-plum-900">
+                        </div>
+                        <div>
+                            <label for="cust-pincode" class="block text-xs font-bold uppercase tracking-wider text-plum-900 mb-1.5">8. Delivery City &amp; Pincode</label>
+                            <input type="text" id="cust-pincode" placeholder="e.g., Delhi - 110001" class="w-full p-3 rounded-xl bg-pearl-50 border border-plum-900/15 text-sm focus:outline-none focus:ring-2 focus:ring-plum-900">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Real-Time Visual Gift Tag Preview & Price Summary (5 Cols) -->
+                <div class="lg:col-span-5 space-y-6 sticky top-24">
+                    <!-- Real-Time Visual Gift Tag Preview Card -->
+                    <div class="bg-gradient-to-br from-pearl-50 to-pearl-100 text-slate-800 rounded-3xl p-6 shadow-2xl border-2 border-champagne-400">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-terracotta-600 flex items-center gap-1.5">
+                                <i class="fa-solid fa-eye"></i> Live Gift Tag &amp; Engraving Preview
+                            </span>
+                            <span class="text-[11px] font-semibold bg-plum-900 text-champagne-300 px-2.5 py-0.5 rounded-full">Mockup Preview</span>
+                        </div>
+
+                        <!-- Simulated Engraved Keepsake Plaque Preview -->
+                        <div class="relative rounded-2xl bg-gradient-to-br from-plum-900 via-plum-800 to-plum-950 p-6 text-center border border-champagne-400/50 shadow-inner overflow-hidden">
+                            <div class="w-3 h-3 rounded-full bg-champagne-400/80 mx-auto mb-3 ring-4 ring-champagne-400/20"></div>
+                            <p class="text-[10px] uppercase tracking-[0.25em] text-champagne-300/80 mb-1" id="preview-item-label">Custom 3D Moon Lamp with Photo &amp; Name</p>
+                            <p class="font-accent italic text-2xl sm:text-3xl text-champagne-300 font-bold tracking-wide my-2 break-words" id="preview-engraved-text">
+                                "Forever &amp; Always • Aarav &amp; Diya"
+                            </p>
+                            <div class="inline-flex items-center gap-1.5 text-[11px] text-pearl-200/80 bg-white/10 px-3 py-1 rounded-full mt-2">
+                                <i class="fa-solid fa-camera text-terracotta-400"></i>
+                                <span id="preview-photo-badge">Photo will be shared on WhatsApp</span>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Price Breakdown -->
+                        <div class="mt-5 pt-4 border-t border-plum-900/10 space-y-2 text-sm">
+                            <div class="flex justify-between text-slate-600">
+                                <span>Item Base (<span id="sum-qty">1</span>x):</span>
+                                <span id="sum-base" class="font-semibold text-slate-800">₹899</span>
+                            </div>
+                            <div class="flex justify-between text-slate-600">
+                                <span>Size &amp; Luxury Wrap Add-ons:</span>
+                                <span id="sum-addons" class="font-semibold text-slate-800">₹99</span>
+                            </div>
+                            <div class="flex justify-between items-baseline pt-3 border-t border-plum-900/10">
+                                <span class="text-xs font-bold uppercase tracking-wider text-plum-900">Estimated Order Total</span>
+                                <span id="sum-total" class="font-serif text-3xl font-extrabold text-plum-900">₹998</span>
+                            </div>
+                        </div>
+
+                        <!-- Instant WhatsApp Order Enquiry Button -->
+                        <button onclick="processWhatsAppOrder()" class="mt-5 w-full py-4 px-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-xl shadow-emerald-600/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Send Order Enquiry on WhatsApp</span>
+                        </button>
+
+                        <p class="text-[11px] text-center text-slate-500 mt-3">
+                            No advance payment required right now. Our team shares your digital mockup first!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (3 Simple Steps) & Why Choose Savri -->
+    <section class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-terracotta-600 font-bold text-xs uppercase tracking-[0.22em]">Effortless Ordering</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-plum-900 mt-2">How Personalized Gifting Works</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-plum-900/10 shadow-sm relative">
+                <div class="w-12 h-12 rounded-2xl bg-plum-900 text-champagne-300 font-serif font-bold text-xl flex items-center justify-center mb-5 shadow-md">1</div>
+                <h3 class="font-serif text-xl font-bold text-plum-900 mb-2">Pick Your Gift</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Browse our online catalogue and choose from 3D moon lamps, engraved wooden frames, Spotify plaques, or celebration hampers.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-plum-900/10 shadow-sm relative">
+                <div class="w-12 h-12 rounded-2xl bg-terracotta-500 text-white font-serif font-bold text-xl flex items-center justify-center mb-5 shadow-md">2</div>
+                <h3 class="font-serif text-xl font-bold text-plum-900 mb-2">Share Name / Photo on WhatsApp</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Send your custom text and favorite high-resolution photo directly to our Savri WhatsApp desk with a single click.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-plum-900/10 shadow-sm relative">
+                <div class="w-12 h-12 rounded-2xl bg-plum-900 text-champagne-300 font-serif font-bold text-xl flex items-center justify-center mb-5 shadow-md">3</div>
+                <h3 class="font-serif text-xl font-bold text-plum-900 mb-2">Preview Mockup &amp; Fast Delivery</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Approve your digital engraving mockup before crafting begins. We wrap it in boutique packaging and ship Pan-India in 24–48 hrs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section id="reviews" class="py-16 sm:py-20 bg-pearl-100 border-y border-plum-900/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-terracotta-600 font-bold text-xs uppercase tracking-[0.22em]">4.9 ★ Rated Gift Atelier</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-plum-900 mt-2">Loved by Thousands of Gift Givers</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-7 rounded-3xl border border-plum-900/10 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-champagne-500 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-slate-600 italic leading-relaxed">
+                            "Ordered the Custom 3D Moon Lamp with our wedding photo for my husband's birthday. Ordering on WhatsApp was so smooth—they shared the mockup in 20 minutes and delivered it beautifully wrapped!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-pearl-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-plum-900 text-champagne-300 font-bold flex items-center justify-center text-sm">NS</div>
+                        <div>
+                            <h4 class="font-bold text-plum-900 text-sm">Neha Singhania</h4>
+                            <p class="text-xs text-slate-500">3D Moon Lamp • Bengaluru</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-7 rounded-3xl border border-plum-900/10 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-champagne-500 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-slate-600 italic leading-relaxed">
+                            "The Engraved Wooden LED Photo Frame and Spotify Acrylic Plaque looked straight out of a luxury boutique. My best friend literally teared up opening it!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-pearl-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-terracotta-500 text-white font-bold flex items-center justify-center text-sm">RK</div>
+                        <div>
+                            <h4 class="font-bold text-plum-900 text-sm">Rohan Kulkarni</h4>
+                            <p class="text-xs text-slate-500">LED Wooden Frame • Pune</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-7 rounded-3xl border border-plum-900/10 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-champagne-500 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-slate-600 italic leading-relaxed">
+                            "Ordered 15 Personalized Leather Wallet &amp; Keychain Combos for our team's annual celebration. Crisp name engraving, zero defects, and super fast courier delivery."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-pearl-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-plum-900 text-champagne-300 font-bold flex items-center justify-center text-sm">AM</div>
+                        <div>
+                            <h4 class="font-bold text-plum-900 text-sm">Aditi Mehta</h4>
+                            <p class="text-xs text-slate-500">Corporate Gift Order • Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Footer & Developer Pitch Credit -->
+    <footer id="contact" class="bg-plum-950 text-pearl-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand About -->
+                <div class="space-y-4">
+                    <span class="font-serif text-xl font-bold text-white tracking-wide block">SAVRI PERSONALIZED GIFTS</span>
+                    <p class="text-sm text-pearl-200/75 leading-relaxed">
+                        Turning your cherished memories into bespoke engraved keepsakes, photo lamps, and luxury hampers delivered across India.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="#customizer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-terracotta-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#customizer" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#customizer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-terracotta-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Popular Categories -->
+                <div>
+                    <h3 class="text-champagne-300 font-bold text-base mb-4">Popular Keepsakes</h3>
+                    <ul class="space-y-2.5 text-sm text-pearl-200/75">
+                        <li><a href="#catalog" class="hover:text-champagne-300 transition">Custom 3D Moon Lamps</a></li>
+                        <li><a href="#catalog" class="hover:text-champagne-300 transition">Engraved Wooden LED Frames</a></li>
+                        <li><a href="#catalog" class="hover:text-champagne-300 transition">Couple Name Neon &amp; Acrylic Lamps</a></li>
+                        <li><a href="#catalog" class="hover:text-champagne-300 transition">Personalized Leather Wallet Combos</a></li>
+                        <li><a href="#catalog" class="hover:text-champagne-300 transition">Spotify Scannable Song Plaques</a></li>
+                    </ul>
+                </div>
+
+                <!-- Shipping & Support -->
+                <div>
+                    <h3 class="text-champagne-300 font-bold text-base mb-4">Order &amp; Dispatch</h3>
+                    <div class="bg-plum-900/80 border border-white/10 rounded-2xl p-4 space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-pearl-200/70">Dispatch Time</span>
+                            <span class="text-white font-semibold">24 – 48 Hours</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-pearl-200/70">Support Hours</span>
+                            <span class="text-champagne-300 font-semibold">10 AM – 9 PM</span>
+                        </div>
+                        <p class="text-xs text-emerald-400 pt-2 border-t border-white/10">
+                            <i class="fa-solid fa-shield-check mr-1"></i> 100% Safe Breakage-Proof Packing
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Store Contact -->
+                <div>
+                    <h3 class="text-champagne-300 font-bold text-base mb-4">Contact Store</h3>
+                    <ul class="space-y-3 text-sm text-pearl-200/80">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-terracotta-400 mt-1"></i>
+                            <span>Savri Personalized Gifts Studio, Main Market (Pan-India Express Delivery)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-terracotta-400"></i>
+                            <a href="tel:+919202592024" class="hover:text-white">+91 92025 92024</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                            <button onclick="processWhatsAppOrder()" class="text-emerald-400 hover:underline font-semibold">Order Directly on WhatsApp</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Developer Pitch Credit -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-pearl-200/65">
+                <p>&copy; 2026 Savri Personalized Gifts. All Rights Reserved.</p>
+                <p class="bg-white/5 border border-champagne-400/30 text-pearl-50 px-4 py-2 rounded-full">
+                    Website Demo Designed &amp; Developed by <strong class="text-champagne-300">Ashish Sharma</strong> &bull; Contact: <a href="tel:8292794750" class="underline hover:text-white font-semibold">8292794750</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Button -->
+    <button onclick="processWhatsAppOrder()" aria-label="Order on WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-2xl shadow-emerald-600/40 flex items-center justify-center hover:scale-110 transition" title="Order on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </button>
+
+    <!-- Product Quick Details Modal -->
+    <div id="details-modal" onclick="closeDetailsModal()" class="fixed inset-0 z-50 hidden items-center justify-center bg-plum-950/80 backdrop-blur-sm p-4">
+        <div onclick="event.stopPropagation()" class="bg-white text-slate-800 rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl border border-champagne-400/40 relative">
+            <button onclick="closeDetailsModal()" aria-label="Close Details" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="detail-img" src="" alt="Gift Preview" class="w-full h-64 object-cover bg-plum-900">
+            <div class="p-6 sm:p-7 space-y-4">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span id="detail-badge" class="text-xs font-bold uppercase tracking-wider text-terracotta-600 bg-terracotta-500/10 px-3 py-1 rounded-full"></span>
+                    <span id="detail-dispatch" class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full"></span>
+                </div>
+                <h3 id="detail-title" class="font-serif text-2xl font-bold text-plum-900"></h3>
+                <p id="detail-desc" class="text-sm text-slate-600 leading-relaxed"></p>
+                <div class="bg-pearl-100 p-3.5 rounded-2xl text-xs text-slate-700 space-y-1">
+                    <p><strong class="text-plum-900">What's Included:</strong> <span id="detail-includes"></span></p>
+                    <p><strong class="text-plum-900">Personalization:</strong> <span id="detail-custom"></span></p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-4">
+                    <div>
+                        <span class="text-[11px] uppercase font-bold text-slate-400 block">Price</span>
+                        <span id="detail-price" class="font-serif text-2xl font-extrabold text-plum-900"></span>
+                    </div>
+                    <button id="detail-cta-btn" class="px-6 py-3.5 rounded-2xl bg-plum-900 hover:bg-terracotta-500 text-champagne-300 hover:text-white font-bold text-sm transition flex items-center gap-2 shadow-md">
+                        <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                        <span>Customize &amp; Order</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Saved Wishlist Drawer Modal -->
+    <div id="wishlist-modal" onclick="closeWishlistModal()" class="fixed inset-0 z-50 hidden items-center justify-center bg-plum-950/80 backdrop-blur-sm p-4">
+        <div onclick="event.stopPropagation()" class="bg-white text-slate-800 rounded-3xl max-w-md w-full p-6 shadow-2xl border border-champagne-400/40 relative">
+            <button onclick="closeWishlistModal()" aria-label="Close Wishlist" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-pearl-100 hover:bg-pearl-200 text-plum-900 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-serif text-xl font-bold text-plum-900 flex items-center gap-2">
+                <i class="fa-solid fa-heart text-terracotta-500"></i> Your Saved Gift Wishlist
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">Select any saved gift to customize &amp; order on WhatsApp.</p>
+
+            <div id="wishlist-items-container" class="my-5 space-y-3 max-h-72 overflow-y-auto">
+                <!-- Populated via JS -->
+            </div>
+
+            <button onclick="closeWishlistModal()" class="w-full py-3 rounded-xl bg-plum-900 text-champagne-300 font-bold text-xs">
+                Continue Browsing Catalogue
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Order Enquiry Confirmation Modal (Lets Client Test Immediately Inside Demo) -->
+    <div id="order-confirm-modal" onclick="closeOrderConfirmModal()" class="fixed inset-0 z-50 hidden items-center justify-center bg-plum-950/85 backdrop-blur-sm p-4">
+        <div onclick="event.stopPropagation()" class="bg-pearl-50 text-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border-2 border-champagne-400 relative">
+            <button onclick="closeOrderConfirmModal()" aria-label="Close Modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-pearl-200 hover:bg-pearl-300 text-plum-900 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center">
+                <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mx-auto mb-3">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-terracotta-600">WhatsApp Order Preview Ready</span>
+                <h3 class="font-serif text-2xl font-bold text-plum-900 mt-1">Your Custom Gift Order Summary</h3>
+                <p class="text-xs text-slate-600 mt-1">Review the formatted WhatsApp message below or launch WhatsApp directly.</p>
+            </div>
+
+            <!-- Pre-formatted WhatsApp Message Preview Box -->
+            <div class="mt-4 bg-white border border-plum-900/15 rounded-2xl p-4 text-xs text-slate-700 font-mono whitespace-pre-line leading-relaxed max-h-56 overflow-y-auto" id="whatsapp-preview-text">
+            </div>
+
+            <div class="mt-5 flex flex-col sm:flex-row gap-3">
+                <a id="launch-whatsapp-link" href="#" target="_blank" rel="noopener" class="flex-1 py-3.5 px-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Open WhatsApp Now
+                </a>
+                <button onclick="closeOrderConfirmModal()" class="py-3.5 px-5 rounded-2xl bg-plum-900 text-champagne-300 font-bold text-sm">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Configurable WhatsApp Store Number (Using Ashish's demo contact so live test works immediately)
+        const STORE_WHATSAPP = "918292794750";
+
+        // Curated Savri Personalized Gifts Catalogue
+        const giftsData = [
+            {
+                id: 1,
+                title: "Custom 3D Moon Lamp with Photo & Name",
+                category: "birthday",
+                catLabel: "Birthday Specials",
+                price: 899,
+                customTag: "Name + Photo",
+                dispatch: "Dispatches in 24-48 hrs",
+                desc: "3D-printed lunar surface lamp glowing in 16 remote-controlled colors with your cherished photo and name seamlessly embedded.",
+                includes: "15cm 3D Moon Lamp, Wooden Stand, USB Cable, Remote Control & Gift Box",
+                image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/3B1330/E2C365?text=Custom+3D+Moon+Lamp"
+            },
+            {
+                id: 2,
+                title: "Engraved Wooden LED Photo Frame",
+                category: "couples",
+                catLabel: "For Couples & Anniversary",
+                price: 749,
+                customTag: "Name + Photo",
+                dispatch: "Dispatches in 24-48 hrs",
+                desc: "Warm golden LED-backlit imported beechwood plaque laser-engraved with your portrait, anniversary date, and heartfelt quote.",
+                includes: "Engraved Beechwood Frame, Warm LED Strip, Power Adapter & Tabletop Stand",
+                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/521B43/F2DF9B?text=Engraved+Wooden+LED+Frame"
+            },
+            {
+                id: 3,
+                title: "Personalized Couple Name Neon Sign / Acrylic Lamp",
+                category: "couples",
+                catLabel: "For Couples & Anniversary",
+                price: 1299,
+                customTag: "Custom Names + Font",
+                dispatch: "Dispatches in 48 hrs",
+                desc: "Bespoke warm-pink & champagne LED neon name light crafted on crystal-clear cast acrylic—a showstopper for bedrooms & weddings.",
+                includes: "Custom Acrylic Neon Sign, 12V Adapter, Dimmer Switch & Wall Mount Kit",
+                image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/3B1330/E2C365?text=Couple+Name+Neon+Lamp"
+            },
+            {
+                id: 4,
+                title: "Custom Caricature Wooden Desk Stand",
+                category: "birthday",
+                catLabel: "Birthday Specials",
+                price: 649,
+                customTag: "Face Photo + Theme",
+                dispatch: "Dispatches in 24-48 hrs",
+                desc: "Fun hand-illustrated caricature cutout printed on high-gloss MDF wood with a custom name base—ideal for birthdays & farewells.",
+                includes: "8-inch Custom Cutout Standee, Engraved Name Base & Protective Box",
+                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/521B43/F2DF9B?text=Caricature+Desk+Stand"
+            },
+            {
+                id: 5,
+                title: "Luxury Personalized Leather Wallet & Keychain Combo",
+                category: "decor",
+                catLabel: "Home & Desk Decor",
+                price: 799,
+                customTag: "Name + Charm",
+                dispatch: "Dispatches in 24 hrs",
+                desc: "Vegan-leather men's & women's wallet paired with a matching metallic keychain, custom embossed with name & lucky charm.",
+                includes: "Engraved Wallet, Matching Name Keychain & Velvet Presentation Box",
+                image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/3B1330/E2C365?text=Leather+Wallet+Combo"
+            },
+            {
+                id: 6,
+                title: "Spotify Scannable Song & Photo Acrylic Plaque",
+                category: "couples",
+                catLabel: "For Couples & Anniversary",
+                price: 599,
+                customTag: "Photo + Song Code",
+                dispatch: "Dispatches in 24 hrs",
+                desc: "Crystal glass-finish acrylic frame featuring your favorite couple photo and a live scannable Spotify code that plays your special song.",
+                includes: "6x8 inch HD Printed Acrylic Plaque & Solid Teakwood Easel Stand",
+                image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/521B43/F2DF9B?text=Spotify+Acrylic+Plaque"
+            },
+            {
+                id: 7,
+                title: "Magic Reveal Photo Mug & Cushion Gift Set",
+                category: "birthday",
+                catLabel: "Birthday Specials",
+                price: 699,
+                customTag: "2 Photos + Message",
+                dispatch: "Dispatches in 24 hrs",
+                desc: "Heat-sensitive black magic mug that reveals your photo with hot coffee, paired with a plush satin photo cushion.",
+                includes: "11oz Magic Ceramic Mug, 12x12 Satin Cushion with Filler & Gift Box",
+                image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/3B1330/E2C365?text=Magic+Mug+%26+Cushion+Set"
+            },
+            {
+                id: 8,
+                title: "Royal Personalized Celebration Hamper Box",
+                category: "hampers",
+                catLabel: "Hampers & Combos",
+                price: 1499,
+                customTag: "Full Box Personalization",
+                dispatch: "Dispatches in 48 hrs",
+                desc: "Curated luxury hamper containing an engraved tumbler, scented soy candle, custom photo frame, chocolates & personalized note.",
+                includes: "Keepsake Magnetic Box, Insulated Name Tumbler, Candle, Frame & Greeting Card",
+                image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=700&q=80",
+                fallback: "https://placehold.co/600x420/521B43/F2DF9B?text=Royal+Celebration+Hamper"
+            }
+        ];
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+        let wishlistIds = [];
+
+        // Render Catalogue Grid
+        function renderCatalogue() {
+            const grid = document.getElementById('gift-grid');
+            const emptyBox = document.getElementById('empty-state');
+
+            const filtered = giftsData.filter(item => {
+                const matchCat = currentFilter === 'all' || item.category === currentFilter;
+                const q = currentSearch.toLowerCase();
+                const matchSearch = item.title.toLowerCase().includes(q) ||
+                                    item.desc.toLowerCase().includes(q) ||
+                                    item.catLabel.toLowerCase().includes(q) ||
+                                    item.customTag.toLowerCase().includes(q);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyBox.classList.remove('hidden');
+                return;
+            }
+
+            emptyBox.classList.add('hidden');
+            grid.innerHTML = filtered.map(item => {
+                const isSaved = wishlistIds.includes(item.id);
+                return `
+                <div class="bg-white rounded-3xl border border-plum-900/10 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-plum-950">
+                            <img src="${item.image}" onerror="this.src='${item.fallback}'" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Customization Tag -->
+                            <span class="absolute top-3 left-3 bg-plum-950/90 backdrop-blur-sm border border-champagne-400/40 text-champagne-300 text-[11px] font-bold px-3 py-1 rounded-full">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1 text-terracotta-400"></i>${item.customTag}
+                            </span>
+
+                            <!-- Wishlist Heart Button -->
+                            <button onclick="toggleWishlist(${item.id})" aria-label="Save to Wishlist" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition">
+                                <i class="fa-solid fa-heart ${isSaved ? 'text-terracotta-500' : 'text-slate-300 hover:text-terracotta-400'}"></i>
+                            </button>
+
+                            <!-- Dispatch Badge -->
+                            <span class="absolute bottom-3 left-3 bg-emerald-950/85 text-emerald-300 text-[10px] font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm">
+                                <i class="fa-solid fa-bolt mr-1"></i>${item.dispatch}
+                            </span>
+                        </div>
+
+                        <div class="p-5">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-terracotta-600">${item.catLabel}</span>
+                            <h3 class="font-serif font-bold text-plum-900 text-lg mt-1 leading-snug">${item.title}</h3>
+                            <p class="text-slate-600 text-xs mt-2 leading-relaxed line-clamp-2">${item.desc}</p>
+                        </div>
+                    </div>
+
+                    <div class="px-5 pb-5 pt-3 border-t border-pearl-200 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold text-slate-400 block">Price</span>
+                                <span class="font-serif text-xl font-extrabold text-plum-900">₹${item.price.toLocaleString('en-IN')}</span>
+                            </div>
+                            <button onclick="openDetailsModal(${item.id})" class="text-xs font-bold text-plum-900 hover:text-terracotta-600 underline transition">
+                                View Details
+                            </button>
+                        </div>
+
+                        <button onclick="selectGiftInCustomizer(${item.id})" class="w-full py-2.5 px-4 rounded-xl bg-plum-900 hover:bg-terracotta-500 text-champagne-300 hover:text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+                            <span>Customize &amp; Order on WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        // Category Tab Clicks
+        document.querySelectorAll('.cat-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.cat-tab').forEach(t => {
+                    t.classList.remove('bg-plum-900', 'text-champagne-300', 'font-bold', 'shadow-sm');
+                    t.classList.add('bg-pearl-100', 'text-slate-700', 'font-semibold');
+                });
+                tab.classList.remove('bg-pearl-100', 'text-slate-700', 'font-semibold');
+                tab.classList.add('bg-plum-900', 'text-champagne-300', 'font-bold', 'shadow-sm');
+
+                currentFilter = tab.getAttribute('data-filter');
+                renderCatalogue();
+            });
+        });
+
+        // Filter from Occasion Strip
+        function filterByOccasion(category) {
+            const targetTab = document.querySelector(`.cat-tab[data-filter="${category}"]`);
+            if (targetTab) targetTab.click();
+            document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Live Search Input
+        document.getElementById('gift-search').addEventListener('input', (e) => {
+            currentSearch = e.target.value.trim();
+            renderCatalogue();
+        });
+
+        function resetCatalog() {
+            currentFilter = 'all';
+            currentSearch = '';
+            document.getElementById('gift-search').value = '';
+            document.querySelector('.cat-tab[data-filter="all"]').click();
+        }
+
+        // Wishlist Toggle & Modal
+        function toggleWishlist(id) {
+            if (wishlistIds.includes(id)) {
+                wishlistIds = wishlistIds.filter(item => item !== id);
+            } else {
+                wishlistIds.push(id);
+            }
+            document.getElementById('wishlist-count').textContent = wishlistIds.length;
+            renderCatalogue();
+        }
+
+        function openWishlistModal() {
+            const container = document.getElementById('wishlist-items-container');
+            if (wishlistIds.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-8 bg-pearl-50 rounded-2xl border border-plum-900/10">
+                        <i class="fa-regular fa-heart text-3xl text-terracotta-400 mb-2"></i>
+                        <p class="text-sm font-semibold text-plum-900">No gifts saved yet</p>
+                        <p class="text-xs text-slate-500 mt-1">Tap the heart icon on any gift in the catalogue to save it here.</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = wishlistIds.map(id => {
+                    const item = giftsData.find(g => g.id === id);
+                    return `
+                        <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-pearl-50 border border-plum-900/10">
+                            <div class="flex items-center gap-3">
+                                <img src="${item.image}" onerror="this.src='${item.fallback}'" alt="${item.title}" class="w-12 h-12 rounded-xl object-cover">
+                                <div>
+                                    <h4 class="font-bold text-xs text-plum-900">${item.title}</h4>
+                                    <span class="text-xs font-extrabold text-terracotta-600">₹${item.price}</span>
+                                </div>
+                            </div>
+                            <button onclick="closeWishlistModal(); selectGiftInCustomizer(${item.id});" class="px-3 py-2 rounded-xl bg-plum-900 text-champagne-300 text-[11px] font-bold shrink-0">
+                                Customize
+                            </button>
+                        </div>
+                    `;
+                }).join('');
+            }
+            const modal = document.getElementById('wishlist-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeWishlistModal() {
+            const modal = document.getElementById('wishlist-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Quick Details Modal
+        function openDetailsModal(id) {
+            const item = giftsData.find(g => g.id === id);
+            if (!item) return;
+
+            document.getElementById('detail-img').src = item.image;
+            document.getElementById('detail-img').onerror = () => { document.getElementById('detail-img').src = item.fallback; };
+            document.getElementById('detail-badge').textContent = item.catLabel;
+            document.getElementById('detail-dispatch').textContent = item.dispatch;
+            document.getElementById('detail-title').textContent = item.title;
+            document.getElementById('detail-desc').textContent = item.desc;
+            document.getElementById('detail-includes').textContent = item.includes;
+            document.getElementById('detail-custom').textContent = item.customTag;
+            document.getElementById('detail-price').textContent = '₹' + item.price.toLocaleString('en-IN');
+            document.getElementById('detail-cta-btn').onclick = () => {
+                closeDetailsModal();
+                selectGiftInCustomizer(item.id);
+            };
+
+            const modal = document.getElementById('details-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeDetailsModal() {
+            const modal = document.getElementById('details-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Populate Customizer Dropdown & Handle Selection
+        function populateCustomizerSelect() {
+            const select = document.getElementById('cust-gift');
+            select.innerHTML = giftsData.map(g => `
+                <option value="${g.id}">${g.title} — ₹${g.price.toLocaleString('en-IN')}</option>
+            `).join('');
+        }
+
+        function selectGiftInCustomizer(id) {
+            document.getElementById('cust-gift').value = id;
+            updateCustomizer();
+            document.getElementById('customizer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function adjustCustQty(delta) {
+            const input = document.getElementById('cust-qty');
+            let val = parseInt(input.value) || 1;
+            val = Math.max(1, Math.min(100, val + delta));
+            input.value = val;
+            updateCustomizer();
+        }
+
+        // Real-Time Gift Customizer & Tag Preview Engine
+        function getCustomizerSummary() {
+            const giftId = parseInt(document.getElementById('cust-gift').value) || 1;
+            const gift = giftsData.find(g => g.id === giftId) || giftsData[0];
+            const variantSelect = document.getElementById('cust-variant');
+            const variantExtra = parseInt(variantSelect.value) || 0;
+            const variantLabel = variantSelect.options[variantSelect.selectedIndex].getAttribute('data-label');
+            const qty = Math.max(1, parseInt(document.getElementById('cust-qty').value) || 1);
+
+            const customText = document.getElementById('cust-text').value.trim();
+            const photoPref = document.getElementById('cust-photo').value;
+
+            let addonsPerOrder = 0;
+            const addonsList = [];
+            if (document.getElementById('opt-wrap').checked) {
+                addonsPerOrder += 99;
+                addonsList.push("Luxury Velvet Gift Wrap (+₹99)");
+            }
+            if (document.getElementById('opt-card').checked) {
+                addonsPerOrder += 49;
+                addonsList.push("Personalized Greeting Card (+₹49)");
+            }
+
+            const baseSubtotal = gift.price * qty;
+            const extrasTotal = (variantExtra * qty) + addonsPerOrder;
+            const grandTotal = baseSubtotal + extrasTotal;
+
+            return {
+                gift,
+                variantLabel,
+                qty,
+                customText,
+                photoPref,
+                addonsList,
+                baseSubtotal,
+                extrasTotal,
+                grandTotal
+            };
+        }
+
+        function updateCustomizer() {
+            const data = getCustomizerSummary();
+
+            // Update Live Engraved Gift Tag Preview
+            document.getElementById('preview-item-label').textContent = data.gift.title;
+            document.getElementById('preview-engraved-text').textContent = data.customText
+                ? `"${data.customText}"`
+                : `"Forever & Always • Aarav & Diya"`;
+            document.getElementById('preview-photo-badge').textContent = data.photoPref;
+
+            // Update Dynamic Pricing
+            document.getElementById('sum-qty').textContent = data.qty;
+            document.getElementById('sum-base').textContent = '₹' + data.baseSubtotal.toLocaleString('en-IN');
+            document.getElementById('sum-addons').textContent = '₹' + data.extrasTotal.toLocaleString('en-IN');
+            document.getElementById('sum-total').textContent = '₹' + data.grandTotal.toLocaleString('en-IN');
+        }
+
+        // Generate Formatted WhatsApp Order & Show Confirmation Modal
+        function processWhatsAppOrder() {
+            const data = getCustomizerSummary();
+            const buyerName = document.getElementById('cust-buyer').value.trim() || "Valued Customer";
+            const pincode = document.getElementById('cust-pincode').value.trim() || "To be shared";
+            const textToEngrave = data.customText || "Will confirm text on WhatsApp";
+            const upgradesText = data.addonsList.length ? data.addonsList.join(", ") : "Standard Packaging";
+
+            const formattedMessage =
+`Namaste Savri Personalized Gifts! 🎁
+I would like to place a personalized gift order enquiry:
+
+• *Customer Name:* ${buyerName}
+• *Selected Gift:* ${data.gift.title}
+• *Size / Edition:* ${data.variantLabel}
+• *Quantity:* ${data.qty}
+• *Engraving / Custom Text:* "${textToEngrave}"
+• *Photo Option:* ${data.photoPref}
+• *Gift Upgrades:* ${upgradesText}
+• *Delivery City/Pincode:* ${pincode}
+• *Estimated Total:* ₹${data.grandTotal.toLocaleString('en-IN')}
+
+Please share a digital mockup preview & confirm availability!`;
+
+            const whatsappUrl = `https://wa.me/${STORE_WHATSAPP}?text=${encodeURIComponent(formattedMessage)}`;
+
+            // Show in-page preview confirmation modal so business owner can immediately verify output
+            document.getElementById('whatsapp-preview-text').textContent = formattedMessage;
+            document.getElementById('launch-whatsapp-link').href = whatsappUrl;
+
+            const modal = document.getElementById('order-confirm-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeOrderConfirmModal() {
+            const modal = document.getElementById('order-confirm-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Initialize on Page Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCatalogue();
+            populateCustomizerSelect();
+            updateCustomizer();
+        });
+    </script>
+</body>
+</html>
